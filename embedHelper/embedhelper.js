@@ -1,15 +1,13 @@
-/*
- 
- 
- 
-
- 
- 
- 
- 
- 
- 
-*/
+/**
+ * embedHelper
+ * Copyright (c) 2009 James Padolsey
+ * -------------------------------------------------------
+ * Dual licensed under the MIT and GPL licenses.
+ *    - http://www.opensource.org/licenses/mit-license.php
+ *    - http://www.gnu.org/copyleft/gpl.html
+ * -------------------------------------------------------
+ * Version: 0.1
+ */
 
 var embedHelper = (function(){
     
@@ -35,7 +33,7 @@ var embedHelper = (function(){
             
             args.push(config);
             
-            return this.merge.apply(null, args);
+            return this.merge.apply(this, args);
         
         },
         merge: function(target, source) {
@@ -94,7 +92,7 @@ var embedHelper = (function(){
             
             args.push(params);
             
-            return this.merge.apply(null, args);
+            return this.merge.apply(this, args);
             
         },
         insert: function(item){
